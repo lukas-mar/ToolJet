@@ -10,6 +10,7 @@ fi
 
 if [ -f "./.env" ]
 then
+  echo "Debug: Line 13 - Variables: name=$name, username=$username, host=$host, password=$password"
   declare $(grep -v '^#' ./.env | xargs) 
 fi
 

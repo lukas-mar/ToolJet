@@ -20,6 +20,7 @@ module.exports = defineConfig({
 
   e2e: {
     setupNodeEvents (on, config) {
+      require('@cypress/code-coverage/task')(on, config)
       on("task", {
         readPdf (pathToPdf) {
           return new Promise((resolve) => {
